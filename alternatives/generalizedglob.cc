@@ -8,6 +8,6 @@ void Alternatives::generalizedGlob(string initial, GlobContext &context)
 
 
     msg() << "Merged search command: `" << searchCmd << '\'' << info;
-
-    globHead(initial, searchCmd, context);
+    //globHead(initial, searchCmd, context);
+    recurse(0, searchCmd, initial, context); 
 }

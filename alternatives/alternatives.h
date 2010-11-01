@@ -87,6 +87,9 @@ class Alternatives: public std::vector<std::string>
                                 std::set<std::string> &ignoreSet);
 
         static bool matchIgnore(std::string const &ignore, char const *entry);
+        
+        //Recursive generalized matcher
+        void recurse(std::string::size_type index, std::string const &control, std::string pwd, GlobContext &context);
 };
 
 void Alternatives::addPath(std::string const &element, std::string &path)
